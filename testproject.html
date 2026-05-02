@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
+
+            
             body {
                 background-color: rgb(255, 255, 255);
                 height: 100vh;
@@ -144,7 +149,10 @@
             @media (max-width: 1024px) {
                 body {max-width: 1024px;}
                 .advantages {gap: 150px;}
+                .fonFood button {font-size: 25px;}
                 .advantagesCard {width: 250px; height: 150px;}
+                .advantages h1 {font-size: 25px;}
+                .advantagesP {font-size: 20px;}
             }
 
             @media (max-width: 768px) {
@@ -213,7 +221,7 @@
         <script>
             let order = document.getElementById("orderBnt")
             order.onclick = function() {
-                order.innerText = "Спасибо, свяжемся похже!"
+                alert("Спасибо, свяжемся позже!");
             }
         </script>
     </body>
