@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body {
+                background-color: rgb(255, 255, 255);
+                height: 100vh;
+                margin: 0 auto;
+                max-width: 1200px;
+                padding: 0 10px;
+                
+            }
+
+            .header { 
+                display: grid;
+                grid-template-columns: 1fr;
+                text-align: center;
+                width: 100%;
+            }
+            
+            .header h1 {
+                font-size: 40px;
+                margin: 3px;
+                font-family: sans-serif;
+                
+                color: rgb(0, 0, 0);
+            }
+
+            .header p {
+                font-size: 30px;
+                margin: 0px;
+                font-family: sans-serif;
+                
+                color: rgb(0, 0, 0);
+            }
+
+            .fonFood {
+                margin: 50px;
+                background-color: aqua;
+                background-image: url(https://img.freepik.com/premium-photo/food-table-autumn-food-assortment-top-view-free-space-your-text_187166-5580.jpg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                display: grid;
+                grid-template-columns: 1fr;
+                text-align: center;
+                height: 60%;
+                position: relative;
+                border-radius: 10px;
+                box-shadow: 2px 2px 8px gray;
+                border: 5px solid gray;
+            }
+
+            .fonFood::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.4);
+            z-index: 1;
+            border-radius: 10px;
+            }
+
+            .fonFood div {
+            position: relative;
+            z-index: 2;
+            }
+
+            .fonFood h1 {
+                font-size: 30px;
+                margin: 0px;
+                font-family: sans-serif;
+                color: white;
+            }
+
+            .fonFood p {
+                font-size: 20px;
+                margin: 0px;
+                font-family: sans-serif;
+                color: white;
+            }
+
+            .fonFood button {
+                font-size: 40px;
+                padding: 10px;
+                margin: 0px;
+                font-family: sans-serif;
+                border-radius: 10px;
+            }
+
+
+            .advantages {
+                display: flex;
+                justify-content: center;
+                gap: 200px;
+                
+            }
+
+            .advantagesCard {
+                background-color: rgb(255, 255, 255);
+                width: 300px;
+                height: 200px;
+                box-shadow: 2px 2px 8px black;
+                border-radius: 10px;
+                border: 3px solid gray;
+
+            }
+
+            .advantages h1 {
+                font-family: sans-serif;
+                display: flex;
+                align-items: start;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            .advantagesP {
+                font-size: 20px;
+                font-family: sans-serif;
+                display: flex;
+                align-items: start;
+                justify-content: center;
+                text-align: center;
+            }
+
+
+
+
+
+
+            .foter {
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                gap: 50px
+            }
+
+            @media (max-width: 1200px) {
+                body {max-width: 1200px;}
+            }
+
+            @media (max-width: 1024px) {
+                body {max-width: 1024px;}
+                .advantages {gap: 150px;}
+                .advantagesCard {width: 250px; height: 150px;}
+            }
+
+            @media (max-width: 768px) {
+                body {max-width: 768px;}
+                .header h1 {font-size: 30px;}
+                .header p {font-size: 20px;}
+                .fonFood {height: 30%;}
+                .fonFood h1 {font-size: 20px;}
+                .fonFood p {font-size: 10px;}
+                .fonFood button {font-size: 20px;}
+                .advantages {gap: 75px;}
+                .advantagesCard {width: 200px; height: 100px;}
+                .fonFood {margin: 20px;}
+                .advantages h1 {font-size: 20px;}
+                .advantagesP {font-size: 10px;}
+                .foter {gap: 10px; flex-direction: column;}
+            }
+
+
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>ЕДА МОЛНИЯ</h1>
+            <p>доставим за 30 минут и не съедим по пути</p>
+        </div>
+
+        <div class="fonFood">
+            <div>
+                <h1>Хочешь вкусно поесть?</h1>
+                <p>пицца, роллы, бургеры, суши. Все, что ты любишь!</p>
+            </div>
+
+            <div>
+                <button id="orderBnt">ЗАКАЗАТЬ</button>
+            </div>
+        </div>
+
+        <div class="advantages">
+            <div class="advantagesCard">
+                <h1>Быстро⭐</h1>
+                <p class="advantagesP">Доставим за 30 минут или дешевле</p>
+            </div>
+            <div class="advantagesCard">
+                <h1>Вкусно🍕</h1>
+                <p class="advantagesP">Только свежие продукты</p>
+            </div>
+            <div class="advantagesCard">
+                <h1>Выгодно💰</h1>
+                <p class="advantagesP">Скидка 20% на первый заказ</p>
+            </div>
+        </div>
+
+        <div class="foter">
+            <div>
+                <p>Доставка еды "Еда-Молния"</p>
+            </div>
+            <div>
+                <p>+7 999 888 77 66, заказы@edamolnia.ru</p>
+            </div>
+            <div>
+                <p>VK, Telegram</p>
+            </div>
+        </div>
+
+        <script>
+            let order = document.getElementById("orderBnt")
+            order.onclick = function() {
+                order.innerText = "Спасибо, свяжемся похже!"
+            }
+        </script>
+    </body>
+</html>
